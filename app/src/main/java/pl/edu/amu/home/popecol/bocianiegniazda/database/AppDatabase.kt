@@ -4,11 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import pl.edu.amu.home.popecol.bocianiegniazda.database.entities.Nest
 import pl.edu.amu.home.popecol.bocianiegniazda.database.entities.User
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Nest::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract val userDao: UserDao
+    abstract val nestDao: NestDao
 
     companion object {
         @Volatile

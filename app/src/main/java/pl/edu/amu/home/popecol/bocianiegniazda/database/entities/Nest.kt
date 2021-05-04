@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "users_table")
+@Entity(tableName = "nests_table")
 data class Nest(
     @PrimaryKey(autoGenerate = true)
     val nestId: Long = 0L,
